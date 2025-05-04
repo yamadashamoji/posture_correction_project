@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.MainController">
+    
+    <!-- ヘッダー部分 -->
+    <top>
+        <ToolBar>
+            <Label text="Posture Correction Project" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button text="テーマ切替" onAction="#handleToggleTheme"/>
+        </ToolBar>
+    </top>
+
+    <!-- メインコンテンツ：各画面タブ -->
+    <center>
+        <TabPane fx:id="mainTabPane">
+            <Tab text="記録">
+                <AnchorPane>
+                    <fx:include source="input.fxml"/>
+                </AnchorPane>
+            </Tab>
+
+            <Tab text="カレンダー">
+                <AnchorPane>
+                    <fx:include source="calendar.fxml"/>
+                </AnchorPane>
+            </Tab>
+
+            <Tab text="グラフ">
+                <AnchorPane>
+                    <fx:include source="graph.fxml"/>
+                </AnchorPane>
+            </Tab>
+
+            <Tab text="設定">
+                <AnchorPane>
+                    <fx:include source="settings.fxml"/>
+                </AnchorPane>
+            </Tab>
+        </TabPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.CalendarController">
+
+    <top>
+        <HBox spacing="10" alignment="CENTER" padding="10">
+            <Button fx:id="prevMonthButton" text="←" onAction="#handlePrevMonth"/>
+            <Label fx:id="monthLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Button fx:id="nextMonthButton" text="→" onAction="#handleNextMonth"/>
+        </HBox>
+    </top>
+
+    <center>
+        <GridPane fx:id="calendarGrid" hgap="5" vgap="5" padding="10">
+            <!-- カレンダーのセルはコードで動的に生成 -->
+        </GridPane>
+    </center>
+
+</BorderPane>
