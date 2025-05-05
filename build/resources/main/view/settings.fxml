@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.posture.app.controller.SettingsController"
+      spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <Label text="テーマ設定" style="-fx-font-size: 16px;"/>
+    <VBox spacing="10">
+        <RadioButton fx:id="lightThemeRadio" text="ライトテーマ" selected="true"/>
+        <RadioButton fx:id="darkThemeRadio" text="ダークテーマ"/>
+        <ToggleGroup fx:id="themeToggleGroup">
+            <toggles>
+                <RadioButton fx:id="lightThemeRadio"/>
+                <RadioButton fx:id="darkThemeRadio"/>
+            </toggles>
+        </ToggleGroup>
+    </VBox>
+    
+    <Label text="保存設定" style="-fx-font-size: 16px;"/>
+    <VBox spacing="10">
+        <RadioButton fx:id="sqliteRadio" text="SQLite" selected="true"/>
+        <RadioButton fx:id="jsonRadio" text="JSON"/>
+        <ToggleGroup fx:id="storageToggleGroup">
+            <toggles>
+                <RadioButton fx:id="sqliteRadio"/>
+                <RadioButton fx:id="jsonRadio"/>
+            </toggles>
+        </ToggleGroup>
+    </VBox>
+    
+    <Button text="設定を保存" onAction="#handleSaveSettings"/>
+</VBox>

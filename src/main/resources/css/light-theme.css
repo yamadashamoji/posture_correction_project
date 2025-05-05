@@ -1,0 +1,35 @@
+.root {
+    -fx-base: #ffffff;
+    -fx-background: #f5f5f5;
+    -fx-text-fill: #333333;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.label {
+    -fx-text-fill: #333333;
+}
+
+.button {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333333;
+    -fx-background-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: #cccccc;
+}
+
+.text-field,
+.text-area,
+.combo-box,
+.date-picker {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333333;
+}

@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group = 'com.posture.app'
+version = '1.0'
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+mainClassName = 'com.posture.app.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JavaFX modules
+    implementation 'org.openjfx:javafx-controls:20'
+    implementation 'org.openjfx:javafx-fxml:20'
+
+    // SQLite JDBC
+    implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
+
+    // Gson
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // JUnit
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
+}
+
+javafx {
+    version = "20"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// リソースファイルのコピー設定
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+    test {
+        resources {
+            srcDirs = ['src/test/resources']
+        }
+    }
+}
+
+// 実行時のクラスパス設定
+run {
+    standardInput = System.in
+    workingDir = file('src/main/resources')
+}

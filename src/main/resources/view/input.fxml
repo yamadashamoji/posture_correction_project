@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.posture.app.controller.InputController"
+      spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <Label text="姿勢評価" style="-fx-font-size: 16px;"/>
+    <Slider fx:id="ratingSlider" min="1" max="5" value="3" showTickLabels="true" showTickMarks="true"/>
+    
+    <Label text="コメント"/>
+    <TextArea fx:id="commentArea" prefRowCount="3" wrapText="true"/>
+    
+    <HBox spacing="10">
+        <Button text="保存" onAction="#handleSave"/>
+        <Button text="リセット" onAction="#handleReset"/>
+    </HBox>
+    
+    <Label fx:id="statusLabel"/>
+</VBox>
