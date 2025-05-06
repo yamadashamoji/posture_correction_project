@@ -356,3 +356,4 @@ TestFX または UI自動化ツールを使って GUI操作の検証が可能で
 以上が、Posture Correction Project の **結合テスト / システムテスト**設計です。
 
 ---
+
